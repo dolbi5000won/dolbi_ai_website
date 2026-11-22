@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DOLBI — Official Website
 
-## Getting Started
+JK SYSTEMS / DOLBI AI 공식 홈페이지 프로젝트입니다.
 
-First, run the development server:
+**Make AI Work.** — AI로 일하는 방식의 새로운 기준.
+
+## Stack
+
+- Next.js App Router (TypeScript)
+- Tailwind CSS
+- Supabase (PostgreSQL, Auth, SSR) — 4단계 이후
+- Resend — 4단계 이후
+- Vercel / GitHub — 배포는 승인 후
+
+## Brand
+
+| Token | Value |
+|-------|-------|
+| Navy | `#101D35` |
+| Blue | `#2878E5` |
+| Cyan | `#65C7F3` |
+| Font | Pretendard |
+
+## Scripts
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run lint
+npm run typecheck
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Copy `.env.example` to `.env.local` and fill values when integrating services.
+Do not commit `.env` / `.env.local`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Supabase schema: see `supabase/APPLY.md` and `supabase/migrations/`.
 
-## Learn More
+```bash
+npm run test:validation
+npm run test:security
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Development phases
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Foundation (layout & design system)
+2. Home & brand
+3. Business / project / insight pages
+4. Supabase forms & Resend
+5. Admin
+6. Security, SEO, deploy prep — current
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Admin login: `/admin/login`  
+Create admin (no public signup): `npm run create-admin -- email password`
 
-## Deploy on Vercel
+Deploy checklist: see `DEPLOY.md` (do not push/deploy without approval).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+SEO: `robots.ts` / `sitemap.ts` — sitemap URLs are emitted only when `NEXT_PUBLIC_SITE_URL` is set.
