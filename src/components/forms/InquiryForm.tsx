@@ -219,7 +219,7 @@ export function InquiryForm({ defaultType }: InquiryFormProps) {
 }
 
 const inputClass =
-  "mt-2 w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm text-brand-navy outline-none transition focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20";
+  "mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-[15px] text-brand-navy outline-none transition placeholder:text-slate-400 focus:border-brand-blue focus:ring-4 focus:ring-brand-blue/15";
 
 function Field({
   label,

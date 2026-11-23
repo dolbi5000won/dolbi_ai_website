@@ -1,21 +1,23 @@
 import Link from "next/link";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 
-type Variant = "primary" | "secondary" | "ghost";
+type Variant = "primary" | "secondary" | "ghost" | "light";
 type Size = "md" | "lg";
 
 const variantClass: Record<Variant, string> = {
   primary:
-    "bg-brand-blue text-white hover:bg-[#1f6ad0] focus-visible:outline-brand-blue",
+    "bg-brand-blue text-white shadow-[0_8px_24px_-10px_rgba(40,120,229,0.7)] hover:bg-[#1f6ad0] focus-visible:outline-brand-blue",
   secondary:
-    "border border-brand-navy/15 bg-white text-brand-navy hover:border-brand-blue hover:text-brand-blue focus-visible:outline-brand-blue",
+    "border border-line bg-white text-brand-navy hover:border-brand-navy focus-visible:outline-brand-blue",
   ghost:
-    "bg-transparent text-white hover:bg-white/10 focus-visible:outline-white",
+    "border border-white/20 bg-white/[0.04] text-white hover:border-white/40 hover:bg-white/10 focus-visible:outline-white",
+  light:
+    "bg-white text-brand-navy hover:bg-brand-cyan/90 focus-visible:outline-white",
 };
 
 const sizeClass: Record<Size, string> = {
   md: "h-11 px-5 text-sm",
-  lg: "h-12 px-6 text-base",
+  lg: "h-12 px-6 text-[15px]",
 };
 
 type CommonProps = {
@@ -50,7 +52,7 @@ export function Button(props: ButtonProps) {
   } = props;
 
   const classes = cx(
-    "inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-colors",
+    "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all",
     "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
     "disabled:pointer-events-none disabled:opacity-50",
     variantClass[variant],

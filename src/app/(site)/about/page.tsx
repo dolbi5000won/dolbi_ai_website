@@ -50,7 +50,7 @@ export default function AboutPage() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-xl border border-slate-200 bg-white p-6 transition-colors hover:border-brand-blue"
+              className="rounded-2xl border border-line bg-white p-6 transition-colors hover:border-brand-blue"
             >
               <h3 className="text-lg font-semibold text-brand-navy">
                 {item.title}

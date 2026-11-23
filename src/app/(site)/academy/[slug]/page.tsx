@@ -46,19 +46,19 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
         description={course.summary}
       />
 
-      <section className="border-b border-slate-200 bg-white">
+      <section className="bg-white">
         <div className="mx-auto grid max-w-6xl gap-6 px-5 py-10 sm:px-8 md:grid-cols-3">
-          <div className="rounded-xl border border-slate-200 bg-surface p-5">
+          <div className="rounded-2xl border border-line bg-surface p-5">
             <p className="text-sm text-slate-500">대상</p>
             <p className="mt-2 font-medium text-brand-navy">
               {course.targetAudience}
             </p>
           </div>
-          <div className="rounded-xl border border-slate-200 bg-surface p-5">
+          <div className="rounded-2xl border border-line bg-surface p-5">
             <p className="text-sm text-slate-500">기간</p>
             <p className="mt-2 font-medium text-brand-navy">{course.duration}</p>
           </div>
-          <div className="rounded-xl border border-slate-200 bg-surface p-5">
+          <div className="rounded-2xl border border-line bg-surface p-5">
             <p className="text-sm text-slate-500">난이도</p>
             <p className="mt-2 font-medium text-brand-navy">
               {course.difficulty}
@@ -72,7 +72,7 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
           {course.curriculum.map((item, index) => (
             <li
               key={item}
-              className="flex gap-4 rounded-xl border border-slate-200 bg-white px-5 py-4"
+              className="flex gap-4 rounded-2xl border border-line bg-white px-5 py-4"
             >
               <span className="text-sm font-medium text-brand-blue">
                 {String(index + 1).padStart(2, "0")}
@@ -95,7 +95,7 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
           {course.outcomes.map((item) => (
             <li
               key={item}
-              className="rounded-xl border border-slate-200 bg-white px-5 py-5 text-sm leading-7 text-slate-600"
+              className="rounded-2xl border border-line bg-white px-5 py-5 text-sm leading-7 text-slate-600"
             >
               {item}
             </li>
@@ -120,7 +120,7 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
             SQL 적용(supabase/APPLY.md) 후 접수할 수 있습니다.
           </FormMessage>
         ) : null}
-        <div className="mt-6 max-w-3xl rounded-xl border border-slate-200 bg-white p-6 sm:p-8">
+        <div className="mt-6 max-w-3xl rounded-2xl border border-line bg-white p-6 sm:p-8">
           <CourseApplicationForm
             courseSlug={course.slug}
             courseTitle={course.title}

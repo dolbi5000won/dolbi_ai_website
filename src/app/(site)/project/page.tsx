@@ -37,7 +37,7 @@ export default function ProjectPage() {
               title={PROJECT_PAGE.emptyTitle}
               description={PROJECT_PAGE.emptyDescription}
             />
-            <div className="rounded-xl border border-slate-200 bg-white p-6">
+            <div className="rounded-2xl border border-line bg-white p-6">
               <p className="text-sm font-medium text-brand-navy">
                 상세 페이지에 포함될 항목
               </p>
@@ -45,7 +45,7 @@ export default function ProjectPage() {
                 {PROJECT_DETAIL_SECTIONS.map((section) => (
                   <li
                     key={section}
-                    className="rounded-lg border border-slate-200 bg-surface px-3 py-2 text-sm text-slate-600"
+                    className="rounded-full border border-line bg-surface px-4 py-2 text-sm text-slate-600"
                   >
                     {section}
                   </li>
@@ -59,7 +59,7 @@ export default function ProjectPage() {
               <Link
                 key={project.slug}
                 href={`/project/${project.slug}`}
-                className="group rounded-xl border border-slate-200 bg-white p-6 transition-colors hover:border-brand-blue"
+                className="group rounded-2xl border border-line bg-white p-6 transition-colors hover:border-brand-blue"
               >
                 <p className="text-sm font-medium text-brand-blue">
                   {project.category}

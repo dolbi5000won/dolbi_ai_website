@@ -25,14 +25,14 @@ export default function InsightPage() {
         description={INSIGHT_PAGE.description}
       />
 
-      <section className="border-b border-slate-200 bg-white">
+      <section className="border-b border-line bg-white">
         <div className="mx-auto max-w-6xl px-5 py-8 sm:px-8">
           <p className="text-sm text-slate-500">카테고리</p>
           <ul className="mt-3 flex flex-wrap gap-2">
             {INSIGHT_CATEGORIES.map((category) => (
               <li
                 key={category}
-                className="rounded-lg border border-slate-200 bg-surface px-3 py-2 text-sm text-brand-navy"
+                className="rounded-full border border-line bg-surface px-4 py-2 text-sm text-brand-navy"
               >
                 {category}
               </li>

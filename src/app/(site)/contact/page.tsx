@@ -35,7 +35,7 @@ export default function ContactPage() {
             <Link
               key={item.title}
               href={item.href}
-              className="group rounded-xl border border-slate-200 bg-white p-6 transition-colors hover:border-brand-blue"
+              className="group rounded-2xl border border-line bg-white p-6 transition-colors hover:border-brand-blue"
             >
               <h2 className="text-lg font-semibold text-brand-navy group-hover:text-brand-blue">
                 {item.title}
@@ -61,7 +61,7 @@ export default function ContactPage() {
             SQL 적용(supabase/APPLY.md) 후 이용할 수 있습니다.
           </FormMessage>
         ) : null}
-        <div className="mt-6 max-w-3xl rounded-xl border border-slate-200 bg-white p-6 sm:p-8">
+        <div className="mt-6 max-w-3xl rounded-2xl border border-line bg-white p-6 sm:p-8">
           <InquiryForm />
         </div>
       </SectionBlock>

@@ -3,6 +3,7 @@ type SectionHeadingProps = {
   title: string;
   description?: string;
   align?: "left" | "center";
+  tone?: "light" | "dark";
 };
 
 export function SectionHeading({
@@ -10,25 +11,31 @@ export function SectionHeading({
   title,
   description,
   align = "left",
+  tone = "light",
 }: SectionHeadingProps) {
-  const alignClass = align === "center" ? "mx-auto text-center" : "";
+  const alignClass = align === "center" ? "mx-auto text-center items-center" : "";
+  const dark = tone === "dark";
 
   return (
-    <div className={`max-w-2xl ${alignClass}`}>
+    <div className={`flex max-w-2xl flex-col ${alignClass}`}>
       {eyebrow ? (
-        <p className="text-sm font-medium tracking-wide text-brand-blue">
-          {eyebrow}
-        </p>
+        <p className={`eyebrow ${dark ? "eyebrow-light" : ""}`}>{eyebrow}</p>
       ) : null}
       <h2
-        className={`text-2xl font-semibold tracking-tight text-brand-navy sm:text-3xl ${
-          eyebrow ? "mt-2" : ""
-        }`}
+        className={`text-[1.75rem] leading-tight font-bold tracking-[-0.025em] sm:text-[2.5rem] ${
+          dark ? "text-white" : "text-brand-navy"
+        } ${eyebrow ? "mt-4" : ""}`}
       >
         {title}
       </h2>
       {description ? (
-        <p className="mt-3 text-base leading-7 text-slate-600">{description}</p>
+        <p
+          className={`mt-4 text-base leading-7 sm:text-[17px] sm:leading-8 ${
+            dark ? "text-white/60" : "text-slate-600"
+          }`}
+        >
+          {description}
+        </p>
       ) : null}
     </div>
   );

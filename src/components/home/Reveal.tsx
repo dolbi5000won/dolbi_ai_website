@@ -5,10 +5,12 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 type RevealProps = {
   children: ReactNode;
   className?: string;
+  /** Render as a list item when used directly inside <ul>/<ol>. */
+  as?: "div" | "li";
 };
 
-export function Reveal({ children, className }: RevealProps) {
-  const ref = useRef<HTMLDivElement>(null);
+export function Reveal({ children, className, as = "div" }: RevealProps) {
+  const ref = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -33,9 +35,10 @@ export function Reveal({ children, className }: RevealProps) {
     return () => observer.disconnect();
   }, []);
 
+  const Tag = as;
   return (
-    <div
-      ref={ref}
+    <Tag
+      ref={ref as never}
       className={[
         "reveal",
         visible ? "reveal-visible" : "",
@@ -45,6 +48,6 @@ export function Reveal({ children, className }: RevealProps) {
         .join(" ")}
     >
       {children}
-    </div>
+    </Tag>
   );
 }

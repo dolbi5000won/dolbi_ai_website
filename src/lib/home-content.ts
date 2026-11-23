@@ -103,3 +103,26 @@ export const DIFFERENTIATORS = [
       "온라인으로 빠르게 시작하고, 필요 시 기업 방문 교육으로 현장 적용을 돕습니다.",
   },
 ] as const;
+
+/** Hero flow diagram — taken from the automation service scope. */
+export const HERO_FLOW = {
+  inputs: ["ERP 데이터", "엑셀 · 문서", "수신 메일"],
+  agent: "AI 업무 에이전트",
+  outputs: ["정기 보고서", "회신 초안", "지식검색 답변"],
+} as const;
+
+/** Keywords strip — services and training topics offered. */
+export const HERO_KEYWORDS = [
+  "ERP 보고서 자동화",
+  "엑셀 · 문서 자동화",
+  "이메일 자동화",
+  "AI 업무 에이전트",
+  "사내 지식검색",
+  "AI 네이티브 개발",
+  "업무 · 문서 시스템",
+  "생성형 AI 활용",
+  "Cursor",
+  "Claude Code",
+  "바이브 코딩",
+  "Supabase",
+] as const;

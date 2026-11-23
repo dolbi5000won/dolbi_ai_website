@@ -40,7 +40,7 @@ export default async function InsightDetailPage({ params }: InsightDetailProps) 
         description={insight.summary}
       />
 
-      <article className="border-b border-slate-200 bg-white">
+      <article className="border-b border-line bg-white">
         <div className="mx-auto max-w-3xl px-5 py-14 sm:px-8 sm:py-16">
           <div className="space-y-6">
             {insight.content.map((paragraph) => (

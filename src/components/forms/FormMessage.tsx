@@ -12,7 +12,7 @@ export function FormMessage({ tone = "info", children }: FormMessageProps) {
         : "border-slate-200 bg-slate-50 text-slate-700";
 
   return (
-    <p className={`rounded-lg border px-4 py-3 text-sm leading-6 ${className}`} role="status">
+    <p className={`rounded-xl border px-4 py-3 text-sm leading-6 ${className}`} role="status">
       {children}
     </p>
   );
