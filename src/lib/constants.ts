@@ -1,5 +1,5 @@
 export const BRAND = {
-  name: "DOLBI",
+  name: "Dolbi AI",
   company: "JK SYSTEMS",
   sloganEn: "Make AI Work.",
   sloganKo: "AI로 일하는 방식의 새로운 기준.",

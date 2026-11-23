@@ -29,7 +29,7 @@ export function Logo({ className }: LogoProps) {
           </linearGradient>
         </defs>
       </svg>
-      <span className="text-[17px] font-bold tracking-[0.12em]">
+      <span className="text-[17px] font-bold tracking-tight">
         {BRAND.name}
       </span>
     </span>
